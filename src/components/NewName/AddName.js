@@ -1,6 +1,5 @@
 import React from "react";
 
-import InputComponent from "../InputComponent/InputComponent";
 import Card from "../Card";
 
 import "./AddName.css";

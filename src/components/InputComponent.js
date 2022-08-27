@@ -6,11 +6,23 @@ import Button from "./Button";
 import "./InputComponent.css";
 
 const InputComponent = (props) => {
-  const [addeNewdName, setAddedName] = useState();
+  const [addeNewName, setAddedName] = useState();
   const [addedAge, setAddedAge] = useState();
 
   const addNameHandler = (event) => {
     event.preventDefault();
+    if (addeNewName.trim().length === 0 || addedAge.trim().length === 0) {
+      return;
+    }
+
+    if (+addedAge < 1) {
+      return;
+    }
+
+    props.onInputComponent(addeNewName);
+    setAddedName("");
+    setAddedAge("");
+
     console.log("submitted");
   };
 
