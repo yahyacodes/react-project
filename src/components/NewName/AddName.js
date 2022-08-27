@@ -11,7 +11,7 @@ const AddName = (props) => {
       <ul>
         {props.card.map((names) => (
           <li key={names.id}>
-            {names.name} ({names.age} years ols)
+            {names.name} ({names.age} years old)
           </li>
         ))}
         <li></li>

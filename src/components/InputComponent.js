@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 
 import Card from "./Card";
+// import AddName from "./NewName/AddName";
 import Button from "./Button";
 import "./InputComponent.css";
 
 const InputComponent = (props) => {
-  const [addedName, setAddedName] = useState();
+  const [addeNewdName, setAddedName] = useState();
   const [addedAge, setAddedAge] = useState();
 
   const addNameHandler = (event) => {
     event.preventDefault();
-
-    setAddedName("");
-    setAddedAge("");
+    console.log("submitted");
   };
 
   const inputChangeHandler = (event) => {
@@ -28,20 +27,10 @@ const InputComponent = (props) => {
       <div className="nameInput">
         <form onSubmit={addNameHandler}>
           <label htmlFor="name">Name:</label>
-          <input
-            id="name"
-            value={addedName}
-            type="text"
-            onChange={inputChangeHandler}
-          />
+          <input id="name" type="text" onChange={inputChangeHandler} />
 
           <label htmlFor="age">Age:</label>
-          <input
-            id="age"
-            value={addedAge}
-            type="number"
-            onChange={inputAgeChangeHandler}
-          />
+          <input id="age" type="number" onChange={inputAgeChangeHandler} />
 
           <Button type="submit">Add name</Button>
         </form>
