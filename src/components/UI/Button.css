@@ -8,6 +8,6 @@
 }
 
 .button:hover {
-  background-color: #ccc;
-  color: rgba(68, 11, 11, 0.575);
+  background-color: rgba(104, 6, 6, 0.377);
+  color: #000000;
 }
